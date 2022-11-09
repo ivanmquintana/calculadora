@@ -1,0 +1,34 @@
+public class SumaRestaMultiplicacionYDivision {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double a, b, division, multiplicacion, resta;
+        double suma;
+        String tecla_repetir;
+        do {
+            System.out.print("Ingresa el valor de a: ");
+            a = in.nextDouble();
+            in.nextLine();
+            System.out.print("Ingresa el valor de b: ");
+            b = in.nextDouble();
+            in.nextLine();
+            suma=a+b;
+            resta=a-b;
+            multiplicacion=a*b;
+            if(b==0)
+                division=0;
+            else
+                division=a/b;
+            System.out.println("Valor de division: " + division);
+            System.out.println("Valor de multiplicacion: " + multiplicacion);
+            System.out.println("Valor de resta: " + resta);
+            System.out.println("Valor de suma: " + suma);
+            System.out.println();
+            do {
+                System.out.print("\u00BFDeseas repetir el proceso? (S/N): ");
+                tecla_repetir = in.nextLine();
+            } while (!tecla_repetir.equalsIgnoreCase("s") && !tecla_repetir.equalsIgnoreCase("n"));
+        } while (tecla_repetir.equalsIgnoreCase("s"));
+    }
+
+}
